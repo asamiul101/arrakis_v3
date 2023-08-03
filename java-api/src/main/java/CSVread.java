@@ -51,20 +51,9 @@ public class CSVread {
         for (int i = 0; i < newbondholders.size(); i++) {
             password.add("password");
         }
-        email.add("azhold@gmail.com");
-        email.add("acmeco@gmail.com");
-        email.add("sovinvest@gmail.com");
-        email.add("astrad@gmail.com");
-        email.add("mungov@gmail.com");
-        email.add("goldsachs@gmail.com");
-        email.add("ubs@gmail.com");
-        email.add("barclays@gmail.com");
-        email.add("britel@gmail.com");
-        email.add("penhold@gmail.com");
-        email.add("zurpen@gmail.com");
         String sqldata = "";
         for (int i = 0; i < newbondholders.size(); i++) {
-            sqldata = sqldata + "INSERT INTO users (email, password, bondHolder) VALUES ('" + email.get(i) + "', '" + password.get(i) + "', '" + newbondholders.get(i) + "');\n";
+            sqldata = sqldata + "INSERT INTO users (password, bond_holder) VALUES ('" + password.get(i) + "', '" + newbondholders.get(i) + "');\n";
         }
         System.out.println(sqldata);
         // File path and name

@@ -5,11 +5,11 @@
 --    name VARCHAR(250) NOT NULL,
 --    age INT NOT NULL
 --);
+DROP TABLE IF EXISTS users;
 create table users
 (
     id int  AUTO_INCREMENT PRIMARY KEY,
-    email varchar (50) not null,
     password varchar (50) not null,
-    bondHolder varchar(50) not null
+    bond_holder varchar(50) not null
 );
 
