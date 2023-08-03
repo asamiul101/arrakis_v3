@@ -1,7 +1,6 @@
 package com.db.grad.javaapi.controller;
 
 import com.db.grad.javaapi.exception.ResourceNotFoundException;
-import com.db.grad.javaapi.model.Dog;
 import com.db.grad.javaapi.model.User;
 import com.db.grad.javaapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/")
 @CrossOrigin(origins = "http://localhost:3000")
 public class UsersController {
 
+    @Autowired
     private UserService userService;
 
     @Autowired
@@ -22,10 +22,16 @@ public class UsersController {
         this.userService = userService;
     }
 
-    @GetMapping("/users/{email}")
-    public ResponseEntity <User> getUserByEmail(@PathVariable(value = "email") String email)
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
+
+    @GetMapping("/{bond_holder}")
+    public ResponseEntity <User> getUserByEmail(@PathVariable(value = "bond_holder") String bond_holder)
             throws ResourceNotFoundException {
-        User users = userService.getUserByEmail(email);
+        User users = userService.getUserByBondHolder(bond_holder);
         return ResponseEntity.ok().body(users);
     }
 }

@@ -11,20 +11,11 @@ public class User {
 
     @Id
     private long id;
-    private String email;
     private String password;
 
-    private String bondHolder;
+    private String bond_holder;
 
-    public User() {
-    }
 
-    public User(long id, String email, String password, String bondHolder) {
-        this.id = id;
-        this.email = email;
-        this.password = password;
-        this.bondHolder = bondHolder;
-    }
 
     public long getId() {
         return id;
@@ -36,13 +27,6 @@ public class User {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getPassword() {
         return password;
@@ -52,11 +36,11 @@ public class User {
         this.password = password;
     }
 
-    public String getBondHolder() {
-        return bondHolder;
+    public String getBond_holder() {
+        return bond_holder;
     }
 
-    public void setBondOwner(String bondHolder) {
-        this.bondHolder = bondHolder;
+    public void setBond_holder(String bond_holder) {
+        this.bond_holder = bond_holder;
     }
 }

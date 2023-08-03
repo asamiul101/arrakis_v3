@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class UserService implements IUserService {
 
+    @Autowired
     private UsersRepository usersRepository;
 
     @Autowired
@@ -18,15 +19,20 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public User getUserByEmail(String email) {
+    public User getUserByBondHolder(String bond_holder) {
         User newUser = new User();
-        newUser.setEmail(email);
-        List<User> userList = usersRepository.findUserByEmail(newUser);
-
+        newUser.setBond_holder(bond_holder);
+        List<User> userList = usersRepository.findUserByName(bond_holder);
         User result = null;
         if( userList.size() == 1)
             result = userList.get(0);
 
         return result;
+    }
+
+    @Override
+    public List<User> getAllUsers()
+    {
+        return usersRepository.findAll();
     }
 }
