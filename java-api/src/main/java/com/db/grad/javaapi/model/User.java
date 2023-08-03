@@ -14,16 +14,16 @@ public class User {
     private String email;
     private String password;
 
-    private String bondOwner;
+    private String bondHolder;
 
     public User() {
     }
 
-    public User(long id, String email, String password, String bondOwner) {
+    public User(long id, String email, String password, String bondHolder) {
         this.id = id;
         this.email = email;
         this.password = password;
-        this.bondOwner = bondOwner;
+        this.bondHolder = bondHolder;
     }
 
     public long getId() {
@@ -52,11 +52,11 @@ public class User {
         this.password = password;
     }
 
-    public String getBondOwner() {
-        return bondOwner;
+    public String getBondHolder() {
+        return bondHolder;
     }
 
-    public void setBondOwner(String bondOwner) {
-        this.bondOwner = bondOwner;
+    public void setBondOwner(String bondHolder) {
+        this.bondHolder = bondHolder;
     }
 }
