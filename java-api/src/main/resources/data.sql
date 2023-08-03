@@ -1,3 +1,11 @@
-INSERT INTO dogs (dog_id, name, age) VALUES (1, 'Einstein', 3);
-INSERT INTO dogs (dog_id, name, age) VALUES (2, 'Kaya', 5);
-INSERT INTO dogs (dog_id, name, age) VALUES (3, 'Lassie', 7);
+INSERT INTO users (email, password, bondHolder) VALUES ('azhold@gmail.com', 'password', 'az holdings inc');
+INSERT INTO users (email, password, bondHolder) VALUES ('acmeco@gmail.com', 'password', 'acme co');
+INSERT INTO users (email, password, bondHolder) VALUES ('sovinvest@gmail.com', 'password', 'sovereign investments');
+INSERT INTO users (email, password, bondHolder) VALUES ('astrad@gmail.com', 'password', 'astra trading ltd');
+INSERT INTO users (email, password, bondHolder) VALUES ('mungov@gmail.com', 'password', 'muncipal gov of orange county');
+INSERT INTO users (email, password, bondHolder) VALUES ('goldsachs@gmail.com', 'password', 'goldman sachs');
+INSERT INTO users (email, password, bondHolder) VALUES ('ubs@gmail.com', 'password', 'ubs');
+INSERT INTO users (email, password, bondHolder) VALUES ('barclays@gmail.com', 'password', 'barclays');
+INSERT INTO users (email, password, bondHolder) VALUES ('britel@gmail.com', 'password', 'british telecom');
+INSERT INTO users (email, password, bondHolder) VALUES ('penhold@gmail.com', 'password', 'pension holdings');
+INSERT INTO users (email, password, bondHolder) VALUES ('zurpen@gmail.com', 'password', 'zurich pension fund 4');
