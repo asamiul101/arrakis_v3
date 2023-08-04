@@ -26,7 +26,7 @@ CREATE TABLE book_user (
   FOREIGN KEY (book_id) REFERENCES book(id),
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
+DROP TABLE IF EXISTS security;
 CREATE TABLE security (
   id int NOT NULL AUTO_INCREMENT,
   isin varchar(50) DEFAULT NULL,
@@ -38,6 +38,6 @@ CREATE TABLE security (
   face_value float NOT NULL,
   currency varchar(10) NOT NULL,
   status varchar(32) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-)
+  PRIMARY KEY (id)
+);
 

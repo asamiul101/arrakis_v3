@@ -80,7 +80,6 @@ public class CSVread {
             e.printStackTrace();
         }
         ArrayList<String> password = new ArrayList<String>();
-        //generateRandomPassword passwords=new generateRandomPassword(8);
         for (int i = 0; i < newbondholders.size(); i++) {
             password.add(generateRandomPassword(8));
         }
