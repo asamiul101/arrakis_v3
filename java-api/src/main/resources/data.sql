@@ -1,3 +1,11 @@
-INSERT INTO dogs (dog_id, name, age) VALUES (1, 'Einstein', 3);
-INSERT INTO dogs (dog_id, name, age) VALUES (2, 'Kaya', 5);
-INSERT INTO dogs (dog_id, name, age) VALUES (3, 'Lassie', 7);
+INSERT INTO users (password, bond_holder) VALUES ('password', 'az holdings inc');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'acme co');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'sovereign investments');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'astra trading ltd');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'muncipal gov of orange county');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'goldman sachs');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'ubs');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'barclays');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'british telecom');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'pension holdings');
+INSERT INTO users (password, bond_holder) VALUES ('password', 'zurich pension fund 4');
