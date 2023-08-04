@@ -3,11 +3,29 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react';
+import { useEffect } from 'react';
+import { getAllUsers } from '../services/UserServices';
 
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [users, setUsers] = useState([]);
+
+    useEffect(()=>{
+        getUsersFromAPI();}, 
+        []
+);
+const getUsersFromAPI = ()=>{
+    getAllUsers()
+  .then(res => {
+      setUsers(res.data);
+  })
+  .catch(err => {
+      setUsers([]);
+      console.log(err);
+  })
+}
 
     const handleUsernameChange = (event)=>{
         setUsername(event.target.value);
@@ -39,6 +57,7 @@ const Login = () => {
             Submit
             </Button>
       </Form>
+      {users}
 </Row>
   )
 }
