@@ -1,0 +1,12 @@
+INSERT INTO book_user (book_id, user_id) VALUES ('1','1');
+INSERT INTO book_user (book_id, user_id) VALUES ('2','2');
+INSERT INTO book_user (book_id, user_id) VALUES ('2','3');
+INSERT INTO book_user (book_id, user_id) VALUES ('2','4');
+INSERT INTO book_user (book_id, user_id) VALUES ('3','3');
+INSERT INTO book_user (book_id, user_id) VALUES ('4','5');
+INSERT INTO book_user (book_id, user_id) VALUES ('5','6');
+INSERT INTO book_user (book_id, user_id) VALUES ('5','7');
+INSERT INTO book_user (book_id, user_id) VALUES ('5','8');
+INSERT INTO book_user (book_id, user_id) VALUES ('5','9');
+INSERT INTO book_user (book_id, user_id) VALUES ('5','10');
+INSERT INTO book_user (book_id, user_id) VALUES ('4','11');
