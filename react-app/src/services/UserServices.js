@@ -14,8 +14,4 @@ export function getAllUsers(){
   return http.get("/users");
 }
 
-export function getSpecificUsers(bond_holder){
-  console.log(http.get('/${bond_holder}'))
-  return http.get('/${bond_holder}')
-}
 
