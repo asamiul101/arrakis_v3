@@ -12,12 +12,9 @@ const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([]);
   const [err, setErr] = useState("");
-  const [newUsername, setNewUsername] = useState("");
-  const [newPassword, setNewPassword] = useState("");
+  const [allData, setAllData] = useState([]);
 
-  let allData;
   let bond_holders = [];
   let passwords = [];
   let ids = [];
@@ -26,31 +23,18 @@ const Login = () => {
     getUsersFromAPI();
   }, []);
 
-  useEffect(() => {
-    getSpecificUsersFromAPI(username);
-  }, []);
-
-  const getSpecificUsersFromAPI = (username) => {};
-
   const getUsersFromAPI = () => {
     getAllUsers()
       .then((res) => {
-        console.log(res.data);
-        allData = res.data;
-        allData.map((row) => {
-          bond_holders.push(row.bond_holder);
-          ids.push(row.id);
-          passwords.push(row.password);
-        });
-        console.log(bond_holders);
-        console.log(ids);
-        console.log(passwords);
+        setAllData(res.data);
       })
       .catch((err) => {
-        setUsers([]);
+        setAllData([]);
         console.log(err);
       });
   };
+
+  console.log(allData);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -61,31 +45,28 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let user = {};
-    user.username = username;
-    user.password = password;
-    console.log(user);
+    allData.map((row) => {
+      bond_holders.push(row.bond_holder);
+      ids.push(row.id);
+      passwords.push(row.password);
+    });
+
+    console.log(bond_holders);
+    console.log(ids);
+    console.log(passwords);
+
     console.log(username, password);
 
-    bond_holders.map((each) => {
-      console.log(each);
-      if (each === username) {
-        setNewUsername(each);
-        return;
-      }
-    });
+    const foundBondHolder = bond_holders.includes(username);
+    console.log(foundBondHolder);
 
-    passwords.map((each) => {
-      if (each === password) {
-        setNewPassword(each);
-        return;
-      }
-    });
+    const foundPassword = passwords.includes(password);
+    console.log(foundPassword);
 
-    console.log(newUsername, newPassword);
-
-    if (newUsername == "" && newPassword == "") {
+    if (foundBondHolder === true && foundPassword === true) {
       nav("/home");
+    } else {
+      setErr("                  Wrong email and password");
     }
   };
   return (
