@@ -53,6 +53,7 @@ public class CSVread {
         String splitBy = ",";
         ArrayList<String> newbondholders = new ArrayList<String>();
         ArrayList<String> book_name= new ArrayList<String>();
+        ArrayList<String> issuer_name = new ArrayList<String>();
 //        ArrayList<String> type= new ArrayList<String>();
 //        ArrayList<String> cusip= new ArrayList<String>();
         try {
@@ -65,15 +66,19 @@ public class CSVread {
                 int length = table.length;
                 bondholders.add(table[length - 1].toLowerCase());
                 book_name.add(table[length-2].toLowerCase());
+                issuer_name.add(table[12]);
 //                type.add(table[length-3]);
 //                cusip.add(table[9]);
 
             }
-            //System.out.println(cusip);
+            System.out.println(issuer_name);
+            issuer_name.remove(0);
+            System.out.println(issuer_name);
             bondholders.remove(0);
             book_name.remove(0);
             newbondholders = removeDuplicates(bondholders);
             book_name=removeDuplicates(book_name);
+            issuer_name=removeDuplicates(issuer_name);
 //            System.out.println(book_name);
 //            System.out.println(newbondholders);
         } catch (IOException e) {
@@ -91,6 +96,9 @@ public class CSVread {
         }
         for (int i = 0; i < book_name.size(); i++) {
             sqldata = sqldata+ "INSERT INTO book (name) VALUES ('" + book_name.get(i) +"');\n";
+        }
+        for (int i = 0; i < issuer_name.size(); i++) {
+            sqldata = sqldata+ "INSERT INTO counterparty (name) VALUES ('" + issuer_name.get(i) +"');\n";
         }
         System.out.println(sqldata);
         // File path and name
