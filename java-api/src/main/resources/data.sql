@@ -102,3 +102,34 @@ INSERT INTO trades (trade_date,settlement_date,unit_price,quantity) VALUES ('04/
 INSERT INTO trades (trade_date,settlement_date,unit_price,quantity) VALUES ('23/08/2012', '23/08/2021', '98.76', '300');
 INSERT INTO trades (trade_date,settlement_date,unit_price,quantity) VALUES ('04/02/2013', '27/09/2021', '98.76', '300');
 INSERT INTO trades (trade_date,settlement_date,unit_price,quantity) VALUES ('23/08/2015', '23/08/2021', '98.76', '300');
+
+
+
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('1','1','1','USD', 'open', '50', 'buy', '13/05/2021', '04/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('1','2','1','USD', 'open', '40', 'sell', '04/02/2021', '04/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('2','3','2','USD', 'open', '1000', 'buy', '13/05/2021', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('2','4','2','USD', 'open', '900', 'sell', '04/02/2021', '10/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('3','5','3','USD', 'open', '50', 'buy', '13/05/2021', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('2','6','2','USD', 'open', '1000', 'buy', '13/05/2021', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('2','7','3','USD', 'open', '50', 'sell', '13/05/2021', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','8','4','USD', 'open', '60', 'buy', '04/02/2021', '27/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','9','4','USD', 'open', '50', 'buy', '23/08/2021', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','10','5','GBP', 'open', '1100', 'buy', '27/09/2021', '27/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','11','5','GBP', 'open', '900', 'sell', '28/09/2021', '28/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','12','5','GBP', 'open', '2000', 'buy', '29/09/2021', '29/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','13','5','GBP', 'open', '2000', 'sell', '30/09/2021', '30/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','14','5','GBP', 'open', '1000', 'buy', '01/10/2021', '01/10/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','15','5','GBP', 'open', '900', 'buy', '02/10/2019', '02/10/2019');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','16','5','GBP', 'open', '1900', 'sell', '03/10/2019', '03/10/2019');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','17','5','GBP', 'open', '600', 'buy', '04/10/2018', '04/10/2018');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','18','5','GBP', 'open', '600', 'buy', '05/10/2019', '05/10/2019');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','19','5','GBP', 'open', '700', 'buy', '06/06/2021', '06/06/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('6','20','5','GBP', 'open', '1300', 'sell', '07/10/2011', '07/10/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','21','6','USD', 'open', '60', 'buy', '04/02/2012', '27/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','22','6','USD', 'open', '50', 'buy', '23/08/2012', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','23','6','USD', 'open', '75', 'buy', '04/02/2013', '27/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','24','6','USD', 'open', '50', 'buy', '23/08/2014', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','25','7','USD', 'open', '300', 'buy', '04/02/2016', '27/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','26','7','USD', 'open', '300', 'buy', '23/08/2012', '23/08/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','27','7','USD', 'open', '300', 'buy', '04/02/2013', '27/09/2021');
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('4','28','7','USD, 'open', '300', 'sell', '23/08/2015', '23/08/2021');
