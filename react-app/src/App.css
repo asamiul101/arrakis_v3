@@ -18,7 +18,7 @@
 }
 
 .LoginForm {
-  background-color: rgb(19, 33, 226);
+  background-color: rgb(14, 24, 175);
   height: 1000px;
 }
 
@@ -33,9 +33,23 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 20px;
-  justify-content: center;
+  justify-content: left;
   flex-direction: row;
-  background-color: lightgray;
+  background-color: rgb(180, 175, 175);
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  justify-content: left;
+  flex-direction: row;
+  background-color: rgb(180, 175, 175);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .NavBar-list {
