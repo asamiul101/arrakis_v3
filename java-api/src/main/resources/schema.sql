@@ -40,4 +40,27 @@ CREATE TABLE security (
   status varchar(32) DEFAULT NULL,
   PRIMARY KEY (id)
 );
-
+DROP TABLE IF EXISTS counterparty;
+CREATE TABLE counterparty (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+DROP TABLE IF EXISTS trades;
+CREATE TABLE trades (
+  id int NOT NULL AUTO_INCREMENT,
+  book_id int NOT NULL,
+  security_id int NOT NULL,
+  counterparty_id int NOT NULL,
+  currency varchar(10) NOT NULL,
+  status varchar(32) NOT NULL,
+  quantity int NOT NULL,
+  unit_price float NOT NULL,
+  buy_sell varchar(32) NOT NULL,
+  trade_date datetime NOT NULL,
+  settlement_date datetime NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (security_id) REFERENCES security(id),
+  FOREIGN KEY (counterparty_id) REFERENCES counterparty(id),
+  FOREIGN KEY (book_id) REFERENCES book(id)
+  );
