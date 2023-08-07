@@ -107,3 +107,9 @@ INSERT INTO trades (user_id, book_id, security_id, counterparty_id, currency, st
 INSERT INTO trades (user_id, book_id, security_id, counterparty_id, currency, status, quantity, type, trade_date,settlement_date) VALUES ('11','4','28','7','USD', 'open', '300', 'sell', '23/08/2015', '23/08/2021');
 
 
+DROP TABLE IF EXISTS bond_details;
+CREATE Table bond_details  AS select users.user_id, users.bond_holder, book.*, counterparty.counterparty_id, counterparty.name as "COUNTERPARTY_NAME", security.*, trades.quantity, trades.trade_date, trades.settlement_date from trades
+inner join users on users.user_id = trades.user_id
+inner join book on book.book_id = trades.book_id
+inner join counterparty on counterparty.counterparty_id = trades.counterparty_id
+inner join security on security.security_id = trades.security_id;

@@ -1,5 +1,6 @@
 package com.db.grad.javaapi.service;
 
+import com.db.grad.javaapi.model.Bond_Details;
 import com.db.grad.javaapi.model.Book;
 import com.db.grad.javaapi.model.BookToUser;
 import com.db.grad.javaapi.model.User;
@@ -14,4 +15,6 @@ public interface IUserService {
     List<Book> getAllBooks();
 
     List<BookToUser> getAllBooksByUsers();
+
+    List<Bond_Details> getAllBonds();
 }

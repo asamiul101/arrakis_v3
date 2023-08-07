@@ -1,8 +1,10 @@
 package com.db.grad.javaapi.service;
 
+import com.db.grad.javaapi.model.Bond_Details;
 import com.db.grad.javaapi.model.Book;
 import com.db.grad.javaapi.model.BookToUser;
 import com.db.grad.javaapi.model.User;
+import com.db.grad.javaapi.repository.BondDetailsRepository;
 import com.db.grad.javaapi.repository.BookRepository;
 import com.db.grad.javaapi.repository.BookToUserRepository;
 import com.db.grad.javaapi.repository.UsersRepository;
@@ -19,6 +21,9 @@ public class UserService implements IUserService {
 
     @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    private BondDetailsRepository bondDetailsRepository;
 
 
     @Autowired
@@ -48,5 +53,10 @@ public class UserService implements IUserService {
     @Override
     public List<BookToUser> getAllBooksByUsers() {
         return bookToUserRepository.findAll();
+    }
+
+    @Override
+    public List<Bond_Details> getAllBonds() {
+        return bondDetailsRepository.findAll();
     }
 }

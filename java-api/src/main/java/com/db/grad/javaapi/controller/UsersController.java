@@ -1,6 +1,7 @@
 package com.db.grad.javaapi.controller;
 
 import com.db.grad.javaapi.exception.ResourceNotFoundException;
+import com.db.grad.javaapi.model.Bond_Details;
 import com.db.grad.javaapi.model.Book;
 import com.db.grad.javaapi.model.BookToUser;
 import com.db.grad.javaapi.model.User;
@@ -30,7 +31,7 @@ public class UsersController {
     }
 
 
-    @GetMapping("/home")
+    @GetMapping("/allbooks")
     public List<Book> getAllBooks(){
         return userService.getAllBooks();
     }
@@ -38,6 +39,12 @@ public class UsersController {
     @GetMapping("/books")
     public List<BookToUser> getAllBooksByUsers(){
         return userService.getAllBooksByUsers();
+    }
+
+
+    @GetMapping("/home")
+    public List<Bond_Details> getAllBonds() {
+        return userService.getAllBonds();
     }
 
 
