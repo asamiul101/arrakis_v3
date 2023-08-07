@@ -53,6 +53,20 @@ public class CSVread {
         String splitBy = ",";
         ArrayList<String> newbondholders = new ArrayList<String>();
         ArrayList<String> book_name= new ArrayList<String>();
+        ArrayList<String> issuer_name = new ArrayList<String>();
+        ArrayList<String> isin = new ArrayList<String>();
+        ArrayList<String> cusip = new ArrayList<String>();
+        ArrayList<String> issuername = new ArrayList<String>();
+        ArrayList<String> maturity_date = new ArrayList<String>();
+        ArrayList<String> coupon = new ArrayList<String>();
+        ArrayList<String> type = new ArrayList<String>();
+        ArrayList<String> face_value = new ArrayList<String>();
+        ArrayList<String> currency = new ArrayList<String>();
+        ArrayList<String> status = new ArrayList<String>();
+        ArrayList<String> trade_date = new ArrayList<String>();
+        ArrayList<String> settlement_date = new ArrayList<String>();
+        ArrayList<String> quantity = new ArrayList<String>();
+        ArrayList<String> unit_price = new ArrayList<String>();
 //        ArrayList<String> type= new ArrayList<String>();
 //        ArrayList<String> cusip= new ArrayList<String>();
         try {
@@ -65,15 +79,47 @@ public class CSVread {
                 int length = table.length;
                 bondholders.add(table[length - 1].toLowerCase());
                 book_name.add(table[length-2].toLowerCase());
+                issuer_name.add(table[12]);
+                issuername.add(table[12]);
+                isin.add(table[11]);
+                cusip.add(table[9]);
+                maturity_date.add(table[13]);
+                coupon.add(table[7]);
+                type.add(table[0]);
+                face_value.add(table[10]);
+                currency.add(table[8]);
+                status.add(table[4]);
+                trade_date.add(table[5]);
+                settlement_date.add(table[3]);
+                unit_price.add(table[6]);
+                quantity.add(table[2]);
 //                type.add(table[length-3]);
 //                cusip.add(table[9]);
 
             }
-            //System.out.println(cusip);
+            System.out.println(issuer_name);
+            issuer_name.remove(0);
+            System.out.println(issuer_name);
             bondholders.remove(0);
             book_name.remove(0);
+            isin.remove(0);
+            cusip.remove(0);
+            issuername.remove(0);
+            maturity_date.remove(0);
+            coupon.remove(0);
+            type.remove(0);
+            face_value.remove(0);
+            currency.remove(0);
+            status.remove(0);
+            trade_date.remove(0);
+            settlement_date.remove(0);
+            unit_price.remove(0);
+            quantity.remove(0);
             newbondholders = removeDuplicates(bondholders);
             book_name=removeDuplicates(book_name);
+            issuer_name=removeDuplicates(issuer_name);
+
+
 //            System.out.println(book_name);
 //            System.out.println(newbondholders);
         } catch (IOException e) {
@@ -91,6 +137,15 @@ public class CSVread {
         }
         for (int i = 0; i < book_name.size(); i++) {
             sqldata = sqldata+ "INSERT INTO book (name) VALUES ('" + book_name.get(i) +"');\n";
+        }
+        for (int i = 0; i < issuer_name.size(); i++) {
+            sqldata = sqldata+ "INSERT INTO counterparty (name) VALUES ('" + issuer_name.get(i) +"');\n";
+        }
+        for (int i = 0; i < isin.size(); i++) {
+            sqldata = sqldata+ "INSERT INTO security (isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) VALUES ('" + isin.get(i) +"', '"+ cusip.get(i) +"', '"+ issuername.get(i) +"', '"+ maturity_date.get(i) +"','"+ coupon.get(i) +"','"+ type.get(i) +"','"+ face_value.get(i) +"','"+ currency.get(i) +"','"+ status.get(i) +"');\n";
+        }
+        for (int i = 0; i < trade_date.size(); i++) {
+            sqldata = sqldata+ "INSERT INTO trades (trade_date,settlement_date,unit_price,quantity) VALUES ('" + trade_date.get(i) +"', '"+ settlement_date.get(i) +"', '"+ unit_price.get(i) +"', '"+ quantity.get(i) +"');\n";
         }
         System.out.println(sqldata);
         // File path and name
