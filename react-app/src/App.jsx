@@ -10,13 +10,14 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
+      <Navbar className="NavBar">
+        <img src="./Images/db-logo.jpg" width={45} height={45} />
+        <Container className="NavBar-list">
           <Navbar.Brand href="/home">Home</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/login">Login</Nav.Link>
+            <Nav className="NavBar-list">
+              <Nav.Link href="/">Login</Nav.Link>
               <Nav.Link href="#adduser">Add User</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -24,7 +25,7 @@ const App = () => {
       </Navbar>
 
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </>
