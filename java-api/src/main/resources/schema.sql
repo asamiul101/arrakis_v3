@@ -29,7 +29,7 @@ CREATE TABLE book_user (
 );
 DROP TABLE IF EXISTS security;
 CREATE TABLE security (
-  id int NOT NULL AUTO_INCREMENT,
+  security_id int NOT NULL AUTO_INCREMENT,
   isin varchar(50) DEFAULT NULL,
   cusip varchar(50) DEFAULT NULL,
   issuer_name varchar(255) NOT NULL,
@@ -39,18 +39,19 @@ CREATE TABLE security (
   face_value float NOT NULL,
   currency varchar(10) NOT NULL,
   status varchar(32) DEFAULT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (security_id)
 );
 DROP TABLE IF EXISTS counterparty;
 CREATE TABLE counterparty (
-  id int NOT NULL AUTO_INCREMENT,
+  counterparty_id int NOT NULL AUTO_INCREMENT,
   name varchar(255) NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (counterparty_id)
 );
 
 DROP TABLE IF EXISTS trades;
 CREATE TABLE trades (
   id int NOT NULL AUTO_INCREMENT,
+  user_id int NOT NULL,
   book_id int NOT NULL,
   security_id int NOT NULL,
   counterparty_id int NOT NULL,
@@ -61,8 +62,9 @@ CREATE TABLE trades (
   trade_date varchar(255) NOT NULL,
   settlement_date varchar(255) NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (security_id) REFERENCES security(id),
-  FOREIGN KEY (counterparty_id) REFERENCES counterparty(id),
+  FOREIGN KEY (security_id) REFERENCES security(security_id),
+  FOREIGN KEY (counterparty_id) REFERENCES counterparty(counterparty_id),
+  FOREIGN KEY (user_id) REFERENCES users(user_id),
   FOREIGN KEY (book_id) REFERENCES book(book_id)
   );
 
