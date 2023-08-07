@@ -136,7 +136,7 @@ public class CSVread {
             sqldata = sqldata + "INSERT INTO users (password, bond_holder) VALUES ('" + password.get(i) + "', '" + newbondholders.get(i) + "');\n";
         }
         for (int i = 0; i < book_name.size(); i++) {
-            sqldata = sqldata+ "INSERT INTO book (name) VALUES ('" + book_name.get(i) +"');\n";
+            sqldata = sqldata+ "INSERT INTO book (book_name) VALUES ('" + book_name.get(i) +"');\n";
         }
         for (int i = 0; i < issuer_name.size(); i++) {
             sqldata = sqldata+ "INSERT INTO counterparty (name) VALUES ('" + issuer_name.get(i) +"');\n";

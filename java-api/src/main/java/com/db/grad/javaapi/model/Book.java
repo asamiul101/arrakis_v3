@@ -1,6 +1,7 @@
 package com.db.grad.javaapi.model;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,23 +11,28 @@ import javax.persistence.Table;
 public class Book {
 
     @Id
-    private long id;
+    private long book_id;
 
-    private String name;
+    private String book_name;
 
-    public long getId() {
-        return id;
+
+
+    @Id
+    @Column(name = "book_id", nullable = false)
+    public long getBook_id() {
+        return book_id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setBook_id(long book_id) {
+        this.book_id = book_id;
     }
 
-    public String getName() {
-        return name;
+    @Column(name = "book_name", nullable = false)
+    public String getBook_name() {
+        return book_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBook_name(String book_name) {
+        this.book_name = book_name;
     }
 }

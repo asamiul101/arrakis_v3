@@ -1,5 +1,6 @@
 package com.db.grad.javaapi.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,11 +9,27 @@ import javax.persistence.Table;
 @Table(name = "book_user")
 public class Book_User {
 
+    @Id
+    private long id;
+
     private long book_id;
 
-    @Id
+
     private long user_id;
 
+
+
+    @Id
+    @Column(name = "id", nullable = false)
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Column(name = "book_id", nullable = false)
     public long getBook_id() {
         return book_id;
     }
@@ -21,6 +38,7 @@ public class Book_User {
         this.book_id = book_id;
     }
 
+    @Column(name = "user_id", nullable = false)
     public long getUser_id() {
         return user_id;
     }
