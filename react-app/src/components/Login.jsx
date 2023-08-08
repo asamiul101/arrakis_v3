@@ -94,7 +94,9 @@ const Login = () => {
             Submit
           </Button>
         </Form.Group>
-        {err}
+
+        <div className="errtext">{err}</div>
+
       </Form>
     </Row>
   );
