@@ -66,3 +66,70 @@ footer {
   color: red;
   text-align: center;
 }
+
+table, td {
+  border:1px black solid;
+  text-align: left;
+}
+
+.table1 th {
+  border:1px black solid;
+}
+
+table {
+  border-collapse:collapse;
+}
+
+.table1 {
+  border-collapse:collapse;
+}
+
+.bond_holder {
+  width: 5px;
+}
+
+.th1 {
+  width:63px;
+  border:1px black solid;
+}
+
+.th2 {
+  width:111px;
+}
+
+.th3 {
+  width:110px;
+}
+
+.th4 {
+  width: 33px;
+}
+
+.th5 {
+  width:12px;
+}
+
+.th6 {
+  width: 111px;
+}
+
+.th7 {
+  width: 87px;
+}
+
+.th8 {
+  width: 87px;
+
+}
+
+.th9 {
+  width:38px;
+}
+
+.th10 {
+  width:87px;
+}
+
+.th11 {
+  width:29px;
+}

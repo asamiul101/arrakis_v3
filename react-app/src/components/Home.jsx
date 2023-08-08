@@ -50,20 +50,23 @@ const Home = () => {
       <button type="submit" className="btn" onClick={handleSubmit}>
         Log out
       </button>
-      <table>
-        <tr>
-          <th>bond holder</th>
-          <th>trading book</th>
-          <th>issuer name</th>
-          <th>coupon</th>
-          <th>cusip</th>
-          <th>isin</th>
-          <th>maturity</th>
-          <th>settlement</th>
-          <th>status</th>
-          <th>trade date</th>
-          <th>type</th>
+      <table className="table1">
+      <tr>
+          <th className="th1">bond holder</th>
+          <th className="th2">trading book</th>
+          <th className="th3">issuer name</th>
+          <th className="th4">coupon</th>
+          <th className="th5">cusip</th>
+          <th className="th6">isin</th>
+          <th className="th7">maturity</th>
+          <th className="th8">settlement</th>
+          <th className="th9">status</th>
+          <th className="th10">trade date</th>
+          <th className="th11">type</th>
         </tr>
+        </table>
+      <table>
+        
         {allData.map((row) => (
           <div key={row.user_id}>
             {row.bond_holder != state.username ? (
