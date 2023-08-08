@@ -15,3 +15,8 @@ export function getAllUsers(){
 }
 
 
+export function getAllBonds(){
+  return http.get("/home");
+}
+
+

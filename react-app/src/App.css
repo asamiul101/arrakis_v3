@@ -62,12 +62,28 @@ footer {
   table-layout: fixed;
 }
 
-
-
 .errtext {
-
   color: red;
   text-align: center;
 }
 
+table td {
+  border: 1px black solid;
+  text-align: center;
+}
 
+table {
+  border-collapse: collapse;
+}
+
+.table1 {
+  margin-top: 30px;
+  border-collapse: collapse;
+  border: 1px black solid;
+}
+
+.th1 {
+  width: 120px;
+  border: 1px black solid;
+  text-align: center;
+}
