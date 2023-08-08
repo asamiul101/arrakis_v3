@@ -51,39 +51,38 @@ const Home = () => {
         Log out
       </button>
       <table className="table1">
-      <tr>
+        <tr>
           <th className="th1">bond holder</th>
-          <th className="th2">trading book</th>
-          <th className="th3">issuer name</th>
-          <th className="th4">coupon</th>
-          <th className="th5">cusip</th>
-          <th className="th6">isin</th>
-          <th className="th7">maturity</th>
-          <th className="th8">settlement</th>
-          <th className="th9">status</th>
-          <th className="th10">trade date</th>
-          <th className="th11">type</th>
+          <th className="th1">trading book</th>
+          <th className="th1">issuer name</th>
+          <th className="th1">coupon</th>
+          <th className="th1">cusip</th>
+          <th className="th1">isin</th>
+          <th className="th1">maturity</th>
+          <th className="th1">settlement</th>
+          <th className="th1">status</th>
+          <th className="th1">trade date</th>
+          <th className="th1">type</th>
         </tr>
-        </table>
+      </table>
       <table>
-        
         {allData.map((row) => (
           <div key={row.user_id}>
             {row.bond_holder != state.username ? (
               <div></div>
             ) : (
               <tr>
-                <td>{row.bond_holder}</td>
-                <td>{row.book_name}</td>
-                <td>{row.counterparty_name}</td>
-                <td>{row.coupon}</td>
-                <td>{row.cusip}</td>
-                <td>{row.isin}</td>
-                <td>{row.maturity_date}</td>
-                <td>{row.settlement_date}</td>
-                <td>{row.status}</td>
-                <td>{row.trade_date}</td>
-                <td>{row.type}</td>
+                <td className="th1">{row.bond_holder}</td>
+                <td className="th1">{row.book_name}</td>
+                <td className="th1">{row.counterparty_name}</td>
+                <td className="th1">{row.coupon}</td>
+                <td className="th1">{row.cusip}</td>
+                <td className="th1">{row.isin}</td>
+                <td className="th1">{row.maturity_date}</td>
+                <td className="th1">{row.settlement_date}</td>
+                <td className="th1">{row.status}</td>
+                <td className="th1">{row.trade_date}</td>
+                <td className="th1">{row.type}</td>
               </tr>
             )}
           </div>

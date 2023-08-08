@@ -67,69 +67,23 @@ footer {
   text-align: center;
 }
 
-table, td {
-  border:1px black solid;
-  text-align: left;
-}
-
-.table1 th {
-  border:1px black solid;
+table td {
+  border: 1px black solid;
+  text-align: center;
 }
 
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 .table1 {
-  border-collapse:collapse;
-}
-
-.bond_holder {
-  width: 5px;
+  margin-top: 30px;
+  border-collapse: collapse;
+  border: 1px black solid;
 }
 
 .th1 {
-  width:63px;
-  border:1px black solid;
-}
-
-.th2 {
-  width:111px;
-}
-
-.th3 {
-  width:110px;
-}
-
-.th4 {
-  width: 33px;
-}
-
-.th5 {
-  width:12px;
-}
-
-.th6 {
-  width: 111px;
-}
-
-.th7 {
-  width: 87px;
-}
-
-.th8 {
-  width: 87px;
-
-}
-
-.th9 {
-  width:38px;
-}
-
-.th10 {
-  width:87px;
-}
-
-.th11 {
-  width:29px;
+  width: 120px;
+  border: 1px black solid;
+  text-align: center;
 }
