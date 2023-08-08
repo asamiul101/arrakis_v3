@@ -62,14 +62,7 @@ footer {
   table-layout: fixed;
 }
 
-
 .errtext {
-
   color: red;
   text-align: center;
-}
-
-.btn {
-  text-align: right;
-
 }
