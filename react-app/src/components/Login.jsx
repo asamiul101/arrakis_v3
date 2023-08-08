@@ -65,7 +65,7 @@ const Login = () => {
     console.log(foundPassword);
 
     if (foundBondHolder === true && foundPassword === true) {
-      nav("/home");
+      nav("/home", { state: { username: username } });
     } else {
       setErr("                  Wrong email and password");
     }
